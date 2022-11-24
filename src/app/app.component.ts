@@ -11,6 +11,7 @@ import { Traines } from './Interfaces/StopPointRerInterface';
 export class AppComponent implements OnInit {
   title = 'ETNA-traffic';
   traines: any;
+  TimeNow: Date = new Date();
   currentTrain: Traines[] = [];
   constructor(public http: HttpClient) {}
 
@@ -19,13 +20,14 @@ export class AppComponent implements OnInit {
     .subscribe((reponse: any) => {
     this.traines = reponse
     console.log(this.traines);
-    this.currentTrain = getCurrentTrains(this.traines);
+    this.currentTrain = getCurrentTrains(this.traines, this.TimeNow);
     console.log(this.currentTrain[0].Direction);
     });
     return this.currentTrain;
   }
 
-
-
-
 }
+function padTo2Digits(arg0: number) {
+  throw new Error('Function not implemented.');
+}
+
