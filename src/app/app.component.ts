@@ -19,10 +19,13 @@ export class AppComponent implements OnInit {
     this.http.get<any>('https://api-iv.iledefrance-mobilites.fr/lines/v2/line:IDFM:C01727/stops/stop_area:IDFM:424396/realTime')
     .subscribe((reponse: any) => {
     this.traines = reponse
-    console.log(this.traines.nextDepartures.data);
+    //console.log(this.traines.nextDepartures.data);
     this.currentTrain = getCurrentTrains(this.traines, this.TimeNow);
-    console.log(this.currentTrain[0].Direction);
+    //console.log(this.currentTrain[0].Direction);
     });
+    setTimeout(() => {
+      document.location.reload();
+    }, 30000);
     return this.currentTrain;
   }
 
