@@ -1,6 +1,6 @@
 export interface Traines{
   Direction: string;
   lineid: string;
-  timeLeft : string;
+  timeLeft : number;
   passagetime : any;
 }
