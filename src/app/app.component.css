@@ -1,0 +1,61 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap');
+body{
+  background-color:	#1e2124;
+  margin: 0;
+  padding: 3rem;
+  font-family: 'Raleway', sans-serif;
+}
+
+.opening-hours-container {
+  display: flex;
+}
+
+.right-col {
+  margin-left: 100px;
+  display: flex;
+  align-items: center;
+}
+
+.card#smart-card[data-status="soon"] {
+  background: #F2811E;
+  box-shadow: 0 12px 84px #D6AD88;
+  color: #fff;
+}
+
+.card#smart-card[data-status="open"] {
+  background: #f21e41;
+  box-shadow: 0 12px 84px #d68892;
+  color: #fff;
+}
+.card {
+  min-width: 375px;
+  background-color: #424549;
+  display: grid;
+  grid-template-columns: 250px auto;
+  padding: 32px;
+  border-radius: 8px;
+  font-size: 20px;
+  color: #ffffff;
+  box-shadow: 0 12px 84px rgba(62, 64, 68, 0.5);
+  user-select: none;
+}
+.card#smart-card,.card#smart-card .content {
+  justify-content: center;
+}
+.card:not(:last-child) {
+  margin-bottom: 24px;
+}
+.card svg {
+  height: 24px;
+}
+.card .feather-calendar {
+  margin-top: -3px;
+}
+.card .content {
+  display: flex;
+  align-items: center;
+}
+.card .content span {
+  margin-left: 8px;
+}

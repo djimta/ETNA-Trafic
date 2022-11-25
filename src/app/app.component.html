@@ -1,6 +1,94 @@
-<h1>Les Trains</h1>
+<body>
+<div class="opening-hours-container">
+    <div class="left-col">
+      <div class="card">
+        <div class="content">
+          <i data-feather="clock"></i>
+          <span> {{currentTrain[0].passagetime}} </span>
+        </div>
+        <div class="content">
+          <i data-feather="calendar"></i>
+          <span> {{currentTrain[0].Direction}}</span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="content">
+          <i data-feather="clock"></i>
+          <span> {{currentTrain[1].passagetime}} </span>
+        </div>
+        <div class="content">
+          <i data-feather="calendar"></i>
+          <span>{{currentTrain[1].Direction}}</span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="content">
+          <i data-feather="clock"></i>
+          <span> {{currentTrain[2].passagetime}} </span>
+        </div>
+        <div class="content">
+          <i data-feather="calendar"></i>
+          <span>{{currentTrain[2].Direction}}</span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="content">
+          <i data-feather="clock"></i>
+          <span> {{currentTrain[3].passagetime}} </span>
+        </div>
+        <div class="content">
+          <i data-feather="calendar"></i>
+          <span>{{currentTrain[3].Direction}}</span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="content">
+          <i data-feather="clock"></i>
+          <span> {{currentTrain[4].passagetime}} </span>
+        </div>
+        <div class="content">
+          <i data-feather="calendar"></i>
+          <span>{{currentTrain[4].Direction}}</span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="content">
+          <i data-feather="clock"></i>
+          <span> {{currentTrain[5].passagetime}} </span>
+        </div>
+        <div class="content">
+          <i data-feather="calendar"></i>
+          <span>{{currentTrain[5].Direction}}</span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="content">
+          <i data-feather="clock"></i>
+          <span> {{currentTrain[6].passagetime}} </span>
+        </div>
+        <div class="content">
+          <i data-feather="calendar"></i>
+          <span>{{currentTrain[6].Direction}}</span>
+        </div>
+      </div>
+    </div>
 
-<h3>{{currentTrain[0].Direction}}</h3>
+<!--<div class="right-col">
+      <div class="card" id="smart-card" data-status="soon">
+        <div class="content">
+          <i data-feather="clock"></i>
+          <span id="smart-status"> We'll close soon</span>
+        </div>
+      </div>
+    </div>-->
+  </div>
+
+  <script src="https://unpkg.com/feather-icons"></script>
+  <script>feather.replace()</script>
+</body>
+
+
+<!--<h3>{{currentTrain[0].Direction}}</h3>
 <h3>Arrive dans : {{currentTrain[0].timeLeft}}</h3>
 <h3>Horaire : {{currentTrain[0].passagetime}}</h3>
 
@@ -26,5 +114,4 @@
 
 <h3>{{currentTrain[4].Direction}}</h3>
 <h3>Prochain train : {{currentTrain[4].timeLeft}}</h3>
-<h3>Horaire : {{currentTrain[4].passagetime}}</h3>
-
+<h3>Horaire : {{currentTrain[4].passagetime}}</h3>-->
