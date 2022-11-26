@@ -27,17 +27,30 @@ export const PassageTime = (time: number): string => {
 
 //crée une commande pour récupérer les trains en temps réel
 export const getCurrentTrains = (traines: any, TimeNow: Date ) => {
-  const trains = traines.nextDepartures.data;
-  var CurrentTrains: Traines[] = [];
 
-  trains.forEach((element: { lineDirection: any; lineid: any; time: number; }) => {
-    CurrentTrains.push({
-      Direction: element.lineDirection,
-      lineid: element.lineid,
-      timeLeft: element.time = element.time,
-      //passagetime: getTime(TimeNow)
-      passagetime: PassageTime(element.time),
+  if (traines.nextDepartures.data.length > 0) {
+    const trains = traines.nextDepartures.data;
+    var CurrentTrains: Traines[] = [];
+
+    trains.forEach((element: { lineDirection: any; lineid: any; time: number; }) => {
+      CurrentTrains.push({
+        Direction: element.lineDirection,
+        lineid: element.lineid,
+        timeLeft: element.time = element.time,
+        //passagetime: getTime(TimeNow)
+        passagetime: PassageTime(element.time),
+      });
     });
-  });
-  return CurrentTrains;
+    return CurrentTrains;
+  } else {
+    return [
+      { Direction: "Pas de train", lineid: "Pas de train", timeLeft: 0, passagetime: "Pas de train" },
+      { Direction: "Pas de train", lineid: "Pas de train", timeLeft: 0, passagetime: "Pas de train" },
+      { Direction: "Pas de train", lineid: "Pas de train", timeLeft: 0, passagetime: "Pas de train" },
+      { Direction: "Pas de train", lineid: "Pas de train", timeLeft: 0, passagetime: "Pas de train" },
+      { Direction: "Pas de train", lineid: "Pas de train", timeLeft: 0, passagetime: "Pas de train" },
+      { Direction: "Pas de train", lineid: "Pas de train", timeLeft: 0, passagetime: "Pas de train" },
+      { Direction: "Pas de train", lineid: "Pas de train", timeLeft: 0, passagetime: "Pas de train" },
+    ];
+  }
 }

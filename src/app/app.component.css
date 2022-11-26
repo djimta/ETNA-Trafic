@@ -8,12 +8,16 @@ body{
 }
 
 .opening-hours-container {
-  display: flex;
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  grid-gap: 1rem;
+  margin-top: 2rem;
 }
 
 .right-col {
   margin-left: 100px;
   display: flex;
+  flex-direction: column;
   align-items: center;
 }
 

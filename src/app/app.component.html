@@ -1,117 +1,39 @@
 <body>
-<div class="opening-hours-container">
+  <div class="opening-hours-container">
     <div class="left-col">
-      <div class="card">
+      <div class="card" *ngFor="let train of currentTrain">
         <div class="content">
           <i data-feather="clock"></i>
-          <span> {{currentTrain[0].passagetime}} </span>
+          <span> {{ train.passagetime }} </span>
         </div>
         <div class="content">
           <i data-feather="calendar"></i>
-          <span> {{currentTrain[0].Direction}}</span>
-        </div>
-      </div>
-      <div class="card">
-        <div class="content">
-          <i data-feather="clock"></i>
-          <span> {{currentTrain[1].passagetime}} </span>
-        </div>
-        <div class="content">
-          <i data-feather="calendar"></i>
-          <span>{{currentTrain[1].Direction}}</span>
-        </div>
-      </div>
-      <div class="card">
-        <div class="content">
-          <i data-feather="clock"></i>
-          <span> {{currentTrain[2].passagetime}} </span>
-        </div>
-        <div class="content">
-          <i data-feather="calendar"></i>
-          <span>{{currentTrain[2].Direction}}</span>
-        </div>
-      </div>
-      <div class="card">
-        <div class="content">
-          <i data-feather="clock"></i>
-          <span> {{currentTrain[3].passagetime}} </span>
-        </div>
-        <div class="content">
-          <i data-feather="calendar"></i>
-          <span>{{currentTrain[3].Direction}}</span>
-        </div>
-      </div>
-      <div class="card">
-        <div class="content">
-          <i data-feather="clock"></i>
-          <span> {{currentTrain[4].passagetime}} </span>
-        </div>
-        <div class="content">
-          <i data-feather="calendar"></i>
-          <span>{{currentTrain[4].Direction}}</span>
-        </div>
-      </div>
-      <div class="card">
-        <div class="content">
-          <i data-feather="clock"></i>
-          <span> {{currentTrain[5].passagetime}} </span>
-        </div>
-        <div class="content">
-          <i data-feather="calendar"></i>
-          <span>{{currentTrain[5].Direction}}</span>
-        </div>
-      </div>
-      <div class="card">
-        <div class="content">
-          <i data-feather="clock"></i>
-          <span> {{currentTrain[6].passagetime}} </span>
-        </div>
-        <div class="content">
-          <i data-feather="calendar"></i>
-          <span>{{currentTrain[6].Direction}}</span>
+          <span> {{ train.Direction }}</span>
         </div>
       </div>
     </div>
 
-<div class="right-col">
-      <div class="card" id="smart-card" data-status="soon">
+    <div class="right-col">
+      <div
+        class="card"
+        id="smart-card"
+        data-status="soon"
+        *ngFor="let bus of currentB125"
+      >
         <div class="content">
           <i data-feather="clock"></i>
-          <span id="smart-status">{{all.B125[0].Direction}}</span>
+          <span id="smart-status">{{ bus.Direction }}</span>
+        </div>
+        <div class="content">
+          <i data-feather="clock"></i>
+          <span id="smart-status">{{ bus.passagetime }}</span>
         </div>
       </div>
     </div>
   </div>
 
   <script src="https://unpkg.com/feather-icons"></script>
-  <script>feather.replace()</script>
+  <script>
+    feather.replace();
+  </script>
 </body>
-
-
-<!--<h3>{{currentTrain[0].Direction}}</h3>
-<h3>Arrive dans : {{currentTrain[0].timeLeft}}</h3>
-<h3>Horaire : {{currentTrain[0].passagetime}}</h3>
-
---------------------------------------------------------------------------------
-
-<h3>{{currentTrain[1].Direction}}</h3>
-<h3>Prochain train : {{currentTrain[1].timeLeft}}</h3>
-<h3>Horaire : {{currentTrain[1].passagetime}}</h3>
-
---------------------------------------------------------------------------------
-
-<h3>{{currentTrain[2].Direction}}</h3>
-<h3>Prochain train : {{currentTrain[2].timeLeft}}</h3>
-<h3>Horaire : {{currentTrain[2].passagetime}}</h3>
-
---------------------------------------------------------------------------------
-
-<h3>{{currentTrain[3].Direction}}</h3>
-<h3>Prochain train : {{currentTrain[3].timeLeft}}</h3>
-<h3>Horaire : {{currentTrain[3].passagetime}}</h3>
-
---------------------------------------------------------------------------------
-
-<h3>{{currentTrain[4].Direction}}</h3>
-<h3>Prochain train : {{currentTrain[4].timeLeft}}</h3>
-<h3>Horaire : {{currentTrain[4].passagetime}}</h3>-->
