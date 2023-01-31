@@ -1,4 +1,4 @@
-import { Bus } from '../Interfaces/StopPointRerInterface';
+import { Bus } from '../Interfaces/Bus';
 
 export const PassageTime = (time: number): string => {
   const TimeNow = new Date();
